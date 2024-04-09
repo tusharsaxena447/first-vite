@@ -9,14 +9,14 @@ function App() {
   const [card,setCard] = useState([])
   
     async function fetchData(){
-       const resp =  await fetch('https://jsonplaceholder.typicode.com/posts')
-        var data = await resp.json()
-        setCard(data)
+       const resp =  await fetch('https://dummyjson.com/products')
+        var data = await resp.json()       
+        setCard(data.products)
        
     }
     useEffect(()=>{
       fetchData()
-    },[])
+    })
     
   
   
@@ -24,7 +24,7 @@ function App() {
     <>
     <div className='containe'>
     {card.map((list)=>(
-    <Card key={list.id} title = {list.title} body = {list.body} />
+    <Card key={list.id} title = {list.title} body = {list.description} image={list.thumbnail} />
     ))}
     </div>
      {/* <Form/> */}
