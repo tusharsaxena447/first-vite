@@ -1,16 +1,19 @@
 import './Card.css'
+// import PropTypes from 'prop-types';
 
-export default function Card(props) {
+export default function Card(PropTypes) {
     
   return (
     <>
     
     <div className="cards" >
-    <img src={props.image} style={{height: "150px", width: "100%"}} alt='No image available' />
+    <img src={PropTypes.image} style={{height: "150px", width: "100%"}} alt='No image available' />
     
-    <h5 >{props.title}</h5>
+    <h5 >{PropTypes.title}</h5>
    
-    <p >{props.body}</p>
+    <p >{PropTypes.body}</p>
+    
+    
     
  
 </div>

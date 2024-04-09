@@ -24,7 +24,7 @@ function App() {
     <>
     <div className='containe'>
     {card.map((list)=>(
-    <Card key={list.id} title = {list.title} body = {list.description} image={list.thumbnail} />
+    <Card key={list.id} title = {list.title} body = {list.description} image={list.thumbnail}  />
     ))}
     </div>
      {/* <Form/> */}
