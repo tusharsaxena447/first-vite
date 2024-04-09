@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Form from './Form'
+// import Form from './Form'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
@@ -22,12 +22,12 @@ function App() {
   
   return (
     <>
-    {/* <div className='containe'>
+    <div className='containe'>
     {card.map((list)=>(
     <Card key={list.id} title = {list.title} body = {list.body} />
     ))}
-    </div> */}
-     <Form/>
+    </div>
+     {/* <Form/> */}
       {/* <button onClick={()=>{
         setCount(count+1)
       }}>+</button>
