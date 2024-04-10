@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 // import viteLogo from '/vite.svg'
 // import './App.css'
 import Card from './Card.jsx'
+// import Temperature from './Temperature'
 
 function App() {
   const [card,setCard] = useState([])
@@ -22,6 +23,7 @@ function App() {
   
   return (
     <>
+    {/* <Temperature/> */}
     <div className='containe'>
     {card.map((list)=>(
     <Card key={list.id} title = {list.title} body = {list.description} image={list.thumbnail}  />
