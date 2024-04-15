@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-// import Form from './Form'
+import Form from './Form'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
@@ -8,7 +8,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from "./Routes/Home.jsx"
 import About from './Routes/About.jsx'
 import Contact from "./Routes/Contact.jsx"
-// import Temperature from './Temperature'
+import Temperature from './Temperature'
+import Task from './Task.jsx'
 
 function App() {
   const [card,setCard] = useState([])
@@ -22,14 +23,14 @@ function App() {
       setState(false) 
     }
     useEffect(()=>{
-      fetchData()
+      
     },[])
     
  
   
   return (
     <>
-    {/* <Temperature/> */}
+    
     {/* <img src='https://cdn.dribbble.com/users/2973561/screenshots/5757826/media/221d6bfc1960ab98a7585fcc2a4d0181.gif' alt='' /> */}
     {state ? (<div className="flex items-center justify-center">
     <img  src='https://cdn.dribbble.com/users/2973561/screenshots/5757826/media/221d6bfc1960ab98a7585fcc2a4d0181.gif' alt='' />
@@ -44,15 +45,11 @@ function App() {
       <Route path='/home' element={<Home/>}  />
       <Route path='/about' element={<About/>}  />
       <Route path='/contact' element={<Contact/>}  />
+    <Route path='/form'  element={<Form/>} />
+    <Route path='/temperature'  element={<Temperature/>} />
+    <Route path='/task' element={<Task/>} />
     </Routes>
-     {/* <Form/> */}
-      {/* <button onClick={()=>{
-        setCount(count+1)
-      }}>+</button>
-      <h1>{count}</h1>
-      <button onClick={()=>{
-        setCount(count-1)
-      }}>-</button>  */}
+      
     </>
   )
 }

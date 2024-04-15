@@ -15,8 +15,8 @@ export default function Form() {
   return (
     <>
      <form ref={ref} aria-label='Form' onSubmit={handleSubmit}>
-       Name:  <input type='text' name='email' value={form.email} onChange={handleChange} placeholder='Name'/>
-       Roll:  <input type='text' name='phone' value={form.phone} onChange={handleChange} placeholder='Name'/>
+       Name:  <input className="border-black border-2" type='text' name='email' value={form.email} onChange={handleChange} placeholder='Name'/>
+       Roll:  <input className="border-black border-2" type='text' name='phone' value={form.phone} onChange={handleChange} placeholder='Name'/>
        <button type="submit" >Submit</button>
      </form> 
     </>
